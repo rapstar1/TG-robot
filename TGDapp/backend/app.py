@@ -10,6 +10,11 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 app = Flask(__name__)
 CORS(app)
 
+# 添加一个根路由以测试应用是否可访问
+@app.route('/')
+def home():
+    return "Welcome to the wallet app!"
+
 # Initialize Telegram bot with your Bot Token
 TOKEN = '7224912163:AAH46VSr7vyuP5-oaHt7vzwgkD1YUgG28hk'  # 请替换为你的 Telegram Bot Token
 application = Application.builder().token(TOKEN).build()
