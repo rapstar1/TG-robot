@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Web3 钱包</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div id="mainMenu" class="container">
+        <button id="createWallet" onclick="createWallet()">创建钱包</button>
+        <button id="importWallet">导入钱包</button>
+    </div>
+    <div id="walletInfo" class="container" style="display: none;">
+        <h2>钱包信息</h2>
+        <p><strong>地址:</strong> <span id="walletAddress"></span></p>
+        <p><strong>助记词:</strong> <span id="walletMnemonic"></span></p>
+        <button onclick="goBack()">返回首页</button>
+    </div>
+</body>
+</html>
